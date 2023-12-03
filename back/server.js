@@ -5,9 +5,15 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 3001;
 const path = require('path')
 const app = express();
-
+const corsOptions = {
+  origin: 'articlecloud.azurewebsites.net', // Replace with your allowed origin(s)
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Enable credentials (cookies, authorization headers, etc.)
+  optionsSuccessStatus: 204, // Some legacy browsers (IE11, various SmartTVs) choke on 204
+  allowedHeaders: 'Content-Type,Authorization', // Replace with your allowed header(s)
+};
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 mongoose
   .connect(process.env.MONGO_URI)

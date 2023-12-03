@@ -1,3 +1,3 @@
-const baseUrl = "https://articlecloud.azurewebsites.net";
+const baseUrl = "articlecloud.azurewebsites.net";
 
 export default baseUrl;

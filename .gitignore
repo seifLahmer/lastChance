@@ -1,3 +1,21 @@
-node_modules
-.env
-./client/node_modules
+# Ignore node_modules directory
+node_modules/
+
+# Ignore logs and log files
+logs/
+*.log
+
+# Ignore compiled binaries
+*.class
+*.dll
+*.exe
+*.o
+
+# Ignore IntelliJ IDEA project files
+.idea/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore package-lock files
+package-lock.json
